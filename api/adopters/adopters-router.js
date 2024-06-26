@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
       });
   });
   
-  router.get('/', (req, res) => {
+  router.get('/:id/dogs', (req, res) => {
     Adopter.findDogs(req.params.id)
       .then(dogs => {
         if (dogs.length > 0) {
